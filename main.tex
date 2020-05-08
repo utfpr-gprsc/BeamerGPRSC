@@ -1,0 +1,108 @@
+%!TEX program = xelatex
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[english]{babel}
+
+\usepackage{xstring,iflang,graphicx,hyperref,url,GPRSCbeamer}
+\usepackage{braket}
+%\usepackage{euler}
+\usepackage{listings}
+
+
+\graphicspath{ {./figs/} }
+\setbeamercovered{transparent}
+\lstdefinestyle{customsql}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  xleftmargin=\parindent,
+  language=SQL,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstset{escapechar=@,style=customsql}
+
+% The logo of the research group:
+\IfLanguageName{brazilian}
+    {\grouplogo{GPRSC_Logo.png}}
+    {\grouplogo{GPRSC_Logo_en.png}}
+    
+% The webpage of the research group:
+\grouppage{coens.dv.utfpr.edu.br/gprsc}
+    
+% The logo of the institution:
+\institlogo{UTFPR_Logo.png}
+
+% The name of the conference:
+%\confname{CLOSER}
+
+% The logo of the conference:
+%\conflogo{logo.png}
+
+% The contact e-mail from the authors:
+\contactemail{will@utfpr.edu.br}
+
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+%\usefonttheme{serif}
+
+% The title of the presentation:
+%  - first a short version which is visible at the bottom of each slide;
+%  - second the full title shown on the title slide;
+\title[Short Title]{Title}
+
+% Optional: a subtitle to be dispalyed on the title slide
+%\subtitle{Distributed Data Store for the Social Graph}
+
+% The author(s) of the presentation:
+%  - again first a short version to be displayed at the bottom;
+%  - next the full list of authors, which may include contact information;
+\author[Newton C. Will]{Newton C. Will}
+
+% The institute:
+%  - to start the name of the university as displayed on the top of each slide
+%    this can be adjusted such that you can also create a Dutch version
+%  - next the institute information as displayed on the title slide
+\institute[Federal University of Technology -- Paraná]{Computer Science Department\\
+  Federal University of Technology -- Paraná\\Dois Vizinhos, Brazil}
+
+% Add a date and possibly the name of the event to the slides
+%  - again first a short version to be shown at the bottom of each slide
+%  - second the full date and event name for the title slide
+\date[\today]{\today}
+
+
+
+
+\providecommand{\di}{\mathop{}\!\mathrm{d}}
+\providecommand*{\der}[3][]{\frac{d\if?#1?\else^{#1}\fi#2}{d #3\if?#1?\else^{#1}\fi}} 
+ \providecommand*{\pder}[3][]{% 
+    \frac{\partial\if?#1?\else^{#1}\fi#2}{\partial #3\if?#1?\else^{#1}\fi}% 
+  }
+  
+  
+\begin{document}
+
+\titleframe
+
+\begin{frame}
+  \frametitle{Table of Contents}
+
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
+    
+\end{frame}
+
+\section{References}
+
+\referencesframe{References}{references.bib}
+
+\thanksframe{Thank You}
+
+\end{document}

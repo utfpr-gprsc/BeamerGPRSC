@@ -178,7 +178,7 @@
 \defbeamertemplate*{footline}{mat theme}{%
 \begin{beamercolorbox}[wd=\paperwidth,ht=3ex,dp=2.25ex]{title in head/foot}%
 \begin{minipage}[t]{0.96\textwidth}%
-\hskip10pt\insertshortauthor\hfill\@confn\hfill\insertframenumber{} / \inserttotalframenumber\hskip10pt\vfill%
+\hskip10pt\insertshortauthor\hfill\insertshorttitle\hfill\insertframenumber{} / \inserttotalframenumber\hskip10pt\vfill%
 \end{minipage}%
 \end{beamercolorbox}%
 \vfill%
@@ -219,7 +219,7 @@
 \defbeamertemplate*{headline}{mat theme}{%
   \leavevmode%
     \begin{beamercolorbox}[wd=\paperwidth]{section in head/foot}%
-       \vskip5pt \hskip10pt \insertshorttitle \hfill 
+       \vskip5pt \hskip10pt \@confn \hfill 
  \insertsectionnavigationhorizontal{.8\textwidth}{\hskip0pt plus1filll}{}
 \vskip5pt%
       \ifx\insertframesubtitle\@empty%
